@@ -2,7 +2,12 @@
   "name": "data-channel",
   "version": "0.1.0",
   "description": "Turn a data channel into a stream",
-  "keywords": [],
+  "keywords": [
+    "datachannel"
+    , "stream"
+    , "webrtc"
+    , "peerconnection"
+  ],
   "author": "Raynos <raynos2@gmail.com>",
   "repository": "git://github.com/Raynos/data-channel.git",
   "main": "index",
