@@ -45,9 +45,10 @@ function DataChannel(channel) {
         channel.send(message)
     }
 
-    function onclose() {
+    function onclose(event) {
         queue.end()
         stream.emit("finish")
+        stream.emit("close", event)
     }
 
     function onmessage(message) {
