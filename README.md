@@ -9,7 +9,7 @@ var DataChannel = require("data-channel")
 
 var pc = getPeerConnection(...)
     , channel = pc.createDataChannel
-    , stream = DataChannel(stream)
+    , stream = DataChannel(channel)
 
 stream.write("STREAM ALL THE THINGS")
 ```
