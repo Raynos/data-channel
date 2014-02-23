@@ -22,7 +22,7 @@
     "email": "raynos2@gmail.com"
   },
   "dependencies": {
-    "read-write-stream": "~0.1.4"
+    "through2": "~0.4.1"
   },
   "devDependencies": {
     "tap": "~0.3.1"
