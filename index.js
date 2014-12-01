@@ -23,7 +23,9 @@ function DataChannel(channel) {
 
     function write(chunk, enc, callback) {
         if (!ready) {
-            return buffer.push(chunk)
+            buffer.push(chunk)
+            callback()
+            return
         }
         channel.send(chunk)
         callback()
