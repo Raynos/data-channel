@@ -1,4 +1,5 @@
 var through2 = require("through2")
+var toBuffer = require("typedarray-to-buffer")
 
 module.exports = DataChannel
 
@@ -54,7 +55,11 @@ function DataChannel(channel) {
     }
 
     function onmessage(message) {
-        stream.push(message.data)
+        var data = message.data
+        if (data instanceof ArrayBuffer) {
+            data = toBuffer(new Uint8Array(data))
+        }
+        stream.push(data)
     }
 
     function onerror(err) {
